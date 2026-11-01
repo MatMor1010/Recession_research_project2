@@ -1,0 +1,26 @@
+# This repository is public. Provider data is immutable and must never be committed (licence +
+# size). Bloomberg and WRDS extracts may not be redistributed, so everything under data/ is ignored
+# by default, including folders that do not exist yet.
+data/**
+!data/**/
+
+# Bloomberg terminal screenshots display licensed data.
+manifests/bloomberg_evidence/*
+
+# Holds Bloomberg test values and the CUSIPs of the WRDS bond sample.
+manifests/bloomberg_extraction_request.csv
+
+outputs/models/*
+logs/*.json
+
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pgpass
+*.env
+~$*
+*.egg-info/
+
+# Last, so that it overrides every rule above: keeps the empty folders in a clone.
+!**/.gitkeep

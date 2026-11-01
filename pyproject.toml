@@ -1,0 +1,14 @@
+[project]
+name = "ebp-recession-forecasting"
+version = "0.1.0"
+description = "Project 2 (A05-21): does the excess bond premium still forecast recessions?"
+requires-python = ">=3.11,<3.14"   # same bound as project 1
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    # Read-only access to TRACE, FISD, CRSP and Compustat. The login lives in pgpass.conf.
+    "wrds>=3.5",
+]
+
+[tool.uv]
+package = false
